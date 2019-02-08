@@ -2,7 +2,7 @@
 #ifndef RPI_BASE_H
 #define RPI_BASE_H
 
-#include "../int_types.h"
+#include "../test/int_types.h"
 #include "hal_errors.h"
 
 
@@ -11,6 +11,7 @@
     #define HAL_RPI_PERIPHERAL_BASE     		0x3F000000UL
 	#define HAL_RPI_CORE_CLOCK_FREQUENCY		250000000UL		// http://elinux.org/BCM2835_datasheet_errata
 #else
+	#error "RPI_VERSION not defined"
     #define HAL_RPI_PERIPHERAL_BASE     		0x20000000UL
 	#define HAL_RPI_CORE_CLOCK_FREQUENCY		250000000UL		// http://elinux.org/BCM2835_datasheet_errata
 #endif
